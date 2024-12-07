@@ -36,23 +36,26 @@
 }
 
 :root {
-    --color-primary-dark: #011c44;
+    --color-primary-dark: #011c44; 
     --color-primary-blue: #2b7fff;
     --color-brend-grey: #4a4a4a;
     --color-brend-beauty: #747272;
-    --color-brend-white: #fff;
+    --color-brend-white: #ffffff;
     }
+* {
+    box-sizing: border-box;
+}
 
 body {
     color: var(--color-primary-dark);
     font-family: "Roboto", sans-serif;
     background: var(--color-brend-white);
     font-weight: 400;
+    margin: 0;
 }
 
 h1,h2,h3,h4,h5,h6,p {
     margin-top: 0;
-    margin-bottom: 0;
 }
 
 address {
@@ -66,11 +69,34 @@ ul {
     list-style-type: none;
 }
 
+.conteiner {
+    width: 100%;
+    max-width: 1288px;
+    margin: 0;
+    padding: 0 24px;
+}
+
+.header-nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 .nav-list {
+    display: flex;
+    gap: 56px;
+    flex-grow: 1;
+    justify-content: center;
     font-weight: 400;
     font-size: 18px;
     color: var(--color-primary-dark);
 }
+
+.social-list-link {
+    display: flex;
+    gap: 32px;
+    }
 
 .button-primary {
     color: var(--color-brend-white);
@@ -82,9 +108,11 @@ ul {
     background: var(--color-primary-blue);
     border: 2px solid var(--color-primary-blue);
     cursor: pointer;
+    padding: 16px 32px;
 }
 .button-primary:hover {
     background: transparent;
+    color: var(--color-primary-dark);
 }
 
 .button-secondary {
@@ -97,6 +125,7 @@ ul {
     background: var(--color-primary-blue);
     border: 2px solid var(--color-primary-blue);
     cursor: pointer;
+    margin-bottom: 14px;
 }
 
 .link {
@@ -110,15 +139,53 @@ ul {
     color: var(--color-primary-blue);
 }
 
-.about {
-    font-weight: 700;
-    font-size: 18px;
+.social-link {
+    text-decoration: none;
 }
+
+.about:hover {
+    font-weight: 700;
+}
+
+.header-conteiner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* =====statr===== */
 
 .start-section {
     font-size: 12px;
     line-height: 1.5;
     color: var(--color-brend-grey);
+    padding: 48px;   
+}
+
+.start-section-div {
+    display: block;
+    max-width: 529px;
+    margin-left: 35px; 
+}
+
+.start-section-text-pege {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 238px;
+    margin-left: 35px;
+    
+}
+
+.main-title {
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-size: 140px;
+    line-height: 0.81429;
+    text-transform: capitalize;
+    color: var(--color-primary-blue);
+    margin-bottom: 40px;
+    margin-top: 16px;
 }
 
 .text-page {
@@ -137,16 +204,15 @@ ul {
     
     color: var(--color-brend-beauty);
 }
+
 .line {
     text-decoration: underline;
 }
 
-.section-our-ul .text-page {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 1.18182;
-    text-align: center;
-    color: var(--color-brend-white);
+/*======section-inform======*/
+
+.section-inform {
+    padding: 48px;
 }
 
 .section-inform .text-page {
@@ -164,19 +230,16 @@ ul {
     color: #000;
 }
 
-.main-title {
-    font-family: "Play", sans-serif;
-    font-weight: 700;
-    font-size: 140px;
-    line-height: 0.81429;
-    text-transform: capitalize;
-    color: var(--color-primary-blue);
+.section-why {
+    padding: 48px;
 }
-/*======section-inform======*/
 
-.element-span-color {
-    color: var(--color-primary-blue);
-    
+.section-our-ul .text-page {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.18182;
+    text-align: center;
+    color: var(--color-brend-white);
 }
 
 .section-title {
@@ -185,11 +248,24 @@ ul {
     font-size: 64px;
     text-align: center;
     color: var(--color-primary-dark);
-    
+    margin-bottom: 48px;
 }
+
+.element-span-color {
+    color: var(--color-primary-blue);
+}
+
 .element-span-text {
     font-weight: 600;
     text-transform: capitalize;
+}
+
+.form-title {
+    margin-bottom: 32px;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    color: var(--color-brend-white);
 }
 
 /* ===footer=== */
@@ -200,6 +276,7 @@ ul {
     color: var(--color-brend-white);
     text-decoration: none;
 }
+
 .footer-address:hover {
     color: var(--color-primary-blue);
 }
@@ -210,6 +287,7 @@ ul {
     color: var(--color-brend-white);
     text-decoration: none;
 }
+
 .link-footer:hover {
     color: var(--color-primary-blue);
 }
